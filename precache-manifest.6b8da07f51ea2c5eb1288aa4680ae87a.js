@@ -1,11 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ceb8ae2fac98e458958",
-    "url": "/css/app.e097ef20.css"
+    "revision": "caae86297ad5f73c7d3b",
+    "url": "/css/app.4c153a12.css"
   },
   {
-    "revision": "f2d016db15ceb0ab462c",
-    "url": "/css/chunk-vendors.37c4821f.css"
+    "revision": "625bdfd4d80ad698bafb",
+    "url": "/css/chunk-f823552e.a58bf20f.css"
+  },
+  {
+    "revision": "9c796baf0ba0f8402697",
+    "url": "/css/chunk-vendors.6050725f.css"
   },
   {
     "revision": "9523fab0b5131689ab58d958640aebd0",
@@ -20,11 +24,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/alpine.md"
   },
   {
-    "revision": "ed3d37e8baf8f0ee9948f96aef36ae80",
+    "revision": "debe781687439b9963659853354f596f",
     "url": "/doc/archlinux.md"
   },
   {
-    "revision": "60ca54bf979921c5d86e6fef77e1c0b4",
+    "revision": "ac870eb30173484e23028a6aa68eb13f",
     "url": "/doc/archlinuxcn.md"
   },
   {
@@ -64,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/proxmox.md"
   },
   {
-    "revision": "c4fd83416ba551a70cc04b9e48302736",
+    "revision": "79cc5f214bc0d803e4b3e4d8aab4af50",
     "url": "/doc/repo-ck.md"
   },
   {
@@ -84,16 +88,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo_mirrors.8a0c76bd.png"
   },
   {
-    "revision": "f471c1da027ce941fa83559f443097c8",
+    "revision": "a1b38a275724f6db94565954a14808f1",
     "url": "/index.html"
   },
   {
-    "revision": "8ceb8ae2fac98e458958",
-    "url": "/js/app.d7c95761.js"
+    "revision": "caae86297ad5f73c7d3b",
+    "url": "/js/app.d751f7cd.js"
   },
   {
-    "revision": "f2d016db15ceb0ab462c",
-    "url": "/js/chunk-vendors.cfb1c57e.js"
+    "revision": "625bdfd4d80ad698bafb",
+    "url": "/js/chunk-f823552e.8acbc9d6.js"
+  },
+  {
+    "revision": "9c796baf0ba0f8402697",
+    "url": "/js/chunk-vendors.3b5f6ffa.js"
   },
   {
     "revision": "22023f531117d53e8bc13bcc9cb65bc0",
