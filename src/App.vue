@@ -3,19 +3,22 @@
     <NavigationDrawer app />
     <router-view></router-view>
     <ColorPicker app />
+    <BackToTopFab />
   </v-app>
 </template>
 
 <script>
 import NavigationDrawer from "@/components/layout/NavigationDrawer";
 import ColorPicker from "@/components/modal/ColorPicker";
+import BackToTopFab from "@/components/layout/BackToTopFab";
 
 export default {
   name: "App",
 
   components: {
     NavigationDrawer,
-    ColorPicker
+    ColorPicker,
+    BackToTopFab
   },
   mounted() {
     if (localStorage.colortheme) {

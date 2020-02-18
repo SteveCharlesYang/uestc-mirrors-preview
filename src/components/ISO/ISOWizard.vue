@@ -181,7 +181,7 @@ export default {
   },
   methods: {
     isodown: function(url) {
-      window.location.href = url;
+      window.location.href = process.env.VUE_APP_MIRROR_URL + url;
     },
     icon: function(dist) {
       if (typeof dist != "undefined") {

@@ -8,7 +8,7 @@
     app
   >
     <v-app-bar-nav-icon @click.stop="toggleDrawer" />
-    <v-toolbar-title class="ml-0 pl-4">
+    <v-toolbar-title class="ml-0 pl-4 mr-8">
       <v-icon>mdi-{{ repo.icon }}</v-icon> &nbsp;
       <span>{{ repo.name }}</span>
     </v-toolbar-title>

@@ -5,7 +5,7 @@ import Repo from "@/views/Repo";
 import App from "@/views/App";
 import Browse from "@/views/Browse";
 import Status from "@/views/Status";
-import ISO from "@/views/ISO";
+import NotFound from "@/views/NotFound";
 
 Vue.use(VueRouter);
 
@@ -38,19 +38,21 @@ const routes = [
   {
     path: "/downloadiso/:repo?/:version?/:arch?",
     name: "downloadiso",
-    component: ISO
+    component: () => import("@/views/ISO")
+  },
+  {
+    path: "*",
+    name: "notfound",
+    component: NotFound
   }
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   component: () =>
-  //     import("../views/About.vue")
-  // }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes
 });
 

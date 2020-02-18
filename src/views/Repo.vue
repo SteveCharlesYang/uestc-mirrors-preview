@@ -36,7 +36,10 @@
         <v-tabs-items v-model="tab">
           <v-tab-item value="tab-home">
             <v-card>
-              <v-card-text v-if="typeof thisrepo.links != 'undefined'">
+              <v-card-actions
+                class="ml-4"
+                v-if="typeof thisrepo.links != 'undefined'"
+              >
                 <v-row>
                   <v-col
                     v-for="link in thisrepo.links"
@@ -49,8 +52,15 @@
                     ></v-col
                   >
                 </v-row>
-              </v-card-text>
-              <RepoDocView :doc="'home-' + thisrepo.id" />
+              </v-card-actions>
+              <v-divider />
+              <v-row>
+                <v-col cols="12">
+                  <v-card-text>
+                    <RepoDocView :doc="'home-' + thisrepo.id" />
+                  </v-card-text>
+                </v-col>
+              </v-row>
             </v-card>
           </v-tab-item>
           <v-tab-item
@@ -61,10 +71,8 @@
             <v-card>
               <v-row>
                 <v-col cols="12">
-                  <v-card-text
-                    >访问地址：<code
-                      >https://mirrors.uestc.cn/{{ tabrepo.url }}</code
-                    >
+                  <v-card-subtitle class="ml-4"
+                    ><code>https://mirrors.uestc.cn/{{ tabrepo.url }}</code>
                     <v-btn
                       icon
                       @click="
@@ -79,9 +87,11 @@
                         关闭
                       </v-btn>
                     </v-snackbar>
-                  </v-card-text>
+                  </v-card-subtitle>
                   <v-divider />
-                  <RepoDocView :doc="tabrepo.url" />
+                  <v-card-text>
+                    <RepoDocView :doc="tabrepo.url" />
+                  </v-card-text>
                 </v-col>
               </v-row>
             </v-card>

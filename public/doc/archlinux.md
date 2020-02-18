@@ -1,5 +1,5 @@
 ## Arch Linux 软件仓库镜像使用帮助
-
+<br/>
 编辑 `/etc/pacman.d/mirrorlist`， 在文件的最顶端添加： 
 ```
 Server = https://mirrors.uestc.cn/archlinux/$repo/os/$arch

@@ -49,7 +49,7 @@ export default {
   }),
   methods: {
     gotoDir: function(dir) {
-      window.location.href = dir;
+      window.location.href = process.env.VUE_APP_MIRROR_URL + dir;
     }
   }
 };
