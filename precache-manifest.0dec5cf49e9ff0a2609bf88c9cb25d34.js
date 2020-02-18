@@ -64,6 +64,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/proxmox.md"
   },
   {
+    "revision": "c4fd83416ba551a70cc04b9e48302736",
+    "url": "/doc/repo-ck.md"
+  },
+  {
     "revision": "c24ea9c4a84c17ee023762bf41994a72",
     "url": "/doc/termux.md"
   },
