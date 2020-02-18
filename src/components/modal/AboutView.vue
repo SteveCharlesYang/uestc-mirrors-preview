@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" width="500">
     <template v-slot:activator="{ on }">
-      <v-btn dark v-on="on" icon>
+      <v-btn v-on="on" icon>
         <v-icon>mdi-information-outline</v-icon>
       </v-btn>
     </template>
@@ -16,7 +16,9 @@
             <v-card-title class="headline lighten-2" primary-title>
               UESTC Mirrors
             </v-card-title>
-            <v-card-subtitle>Insider Preview</v-card-subtitle></v-col
+            <v-card-subtitle
+              >Insider Preview v{{ version }}</v-card-subtitle
+            ></v-col
           >
         </v-row>
 
@@ -30,12 +32,40 @@
         本镜像在文档上借鉴了
         <a href="https://mirrors.tuna.tsinghua.edu.cn/">TUNA Mirrors</a>
         的部分内容。<br />
-        本镜像目前在内部开发阶段，公开测试时将公布源码。
+        本镜像前端由<a href="">Vue.js</a>和<a href="">Vuetify</a>强力驱动。
       </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-actions>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn
+              icon
+              v-on="on"
+              @click.stop="
+                open_link('https://github.com/uestclug/uestc-mirrors-preview')
+              "
+            >
+              <v-icon>mdi-xml</v-icon>
+            </v-btn>
+          </template>
+          <span>前端代码</span>
+        </v-tooltip>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn
+              v-on="on"
+              icon
+              @click.stop="
+                open_link('https://github.com/uestclug/mirrors-sync')
+              "
+            >
+              <v-icon>mdi-code-braces</v-icon>
+            </v-btn>
+          </template>
+          <span>同步代码</span>
+        </v-tooltip>
         <v-spacer></v-spacer>
         <v-btn color="primary" text @click="dialog = false">
           关闭
@@ -50,8 +80,14 @@ export default {
   data() {
     return {
       logo: logo,
-      dialog: false
+      dialog: false,
+      version: process.env.VUE_APP_VERSION_CODE
     };
+  },
+  methods: {
+    open_link: url => {
+      window.open(url, "_blank");
+    }
   }
 };
 </script>

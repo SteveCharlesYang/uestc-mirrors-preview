@@ -1,6 +1,7 @@
 <template>
   <v-dialog name="color-picker-ui" v-model="show" max-width="290">
     <v-card :dark="false">
+      <v-card-title>主题颜色</v-card-title>
       <swatches v-model="color" :colors="colors" inline />
       <v-divider />
       <v-card-text>

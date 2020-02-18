@@ -31,8 +31,10 @@
       </v-list>
       <v-divider />
       <v-card-actions>
-        <v-spacer />
         <v-btn to="/status" text color="primary">镜像站状态</v-btn>
+        <v-spacer />
+        <v-btn text color="primary">建议新增</v-btn>
+        <v-btn text color="primary">问题反馈</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

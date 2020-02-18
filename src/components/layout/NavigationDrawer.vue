@@ -93,7 +93,7 @@
       </v-list-group>
       <v-divider />
       <v-footer>
-        <span class="font-weight-light">Insider Preview v0.6.001</span>
+        <span class="font-weight-light">Insider Preview v{{ version }}</span>
         <v-spacer />
         <AboutView />
       </v-footer>
@@ -109,7 +109,8 @@ export default {
     AboutView
   },
   data: () => ({
-    repo: repo
+    repo: repo,
+    version: process.env.VUE_APP_VERSION_CODE
   }),
   methods: {
     checkicon: function(icon) {

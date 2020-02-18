@@ -1,10 +1,5 @@
 <template>
-  <v-menu
-    v-model="menu"
-    :close-on-content-click="false"
-    offset-y
-    :nudge-width="200"
-  >
+  <v-menu :close-on-content-click="false" offset-y :nudge-width="200">
     <template v-slot:activator="{ on }">
       <v-btn v-on="on" icon>
         <v-icon>mdi-apps</v-icon>
