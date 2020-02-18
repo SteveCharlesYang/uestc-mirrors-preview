@@ -22,4 +22,4 @@ deploy:
   on:
     branch: master
   github-token: $GITHUB_TOKEN
-  fqdn: mirrors-dev.uestc.app
+  fqdn: mirrors-canary.uestc.app
