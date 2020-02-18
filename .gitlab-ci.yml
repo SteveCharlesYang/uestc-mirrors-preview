@@ -4,7 +4,6 @@ cache:
     - node_modules/
 
 before_script:
-  - npm install -g yarn --cache-min 99999999
   - yarn
 
 pages:
