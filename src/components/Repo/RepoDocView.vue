@@ -6,7 +6,7 @@
       height="100vh"
       type="article"
     >
-      <VueShowdown class="mdtext" :markdown="mdtext" v-if="!docerr" />
+      <VueMarkdown class="mdtext" v-if="!docerr">{{ mdtext }}</VueMarkdown>
       <v-layout v-if="docerr">
         <v-row align="center" justify="center">
           <v-btn icon large target="_blank">
@@ -18,6 +18,8 @@
   </v-card-text>
 </template>
 <script>
+import VueMarkdown from "vue-markdown";
+
 export default {
   data: () => ({
     loading: true,
@@ -29,16 +31,23 @@ export default {
     this.$ajax
       .get("doc/" + this.doc + ".md")
       .then(response => (this.mdtext = response.data))
-      .catch(() => {
+      .catch(e => {
+        // eslint-disable-next-line no-console
+        console.log(e);
         this.docerr = true;
       })
       .finally(() => (this.loading = false));
-  }
+  },
+  components: { VueMarkdown }
 };
 </script>
 <style lang="scss">
 .mdtext code {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+.mdtext img {
+  max-width: 100%;
+  background-color: white;
 }
 </style>

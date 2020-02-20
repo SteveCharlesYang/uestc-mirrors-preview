@@ -1,69 +1,70 @@
 <template>
   <v-navigation-drawer v-model="drawerState" app>
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="title">
-          UESTC 镜像站
-        </v-list-item-title>
-        <v-list-item-subtitle>
-          UESTC Mirror
-        </v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
-
-    <v-divider />
-
-    <v-list-item to="/">
-      <v-list-item-icon>
-        <v-icon>mdi-home</v-icon>
-      </v-list-item-icon>
-
-      <v-list-item-title>主页</v-list-item-title>
-    </v-list-item>
-
-    <v-list-group
-      prepend-icon="mdi-linux"
-      v-if="typeof repo.linux != 'undefined'"
-    >
-      <template v-slot:activator>
-        <v-list-item-title> Linux 发行版 </v-list-item-title>
-      </template>
-
-      <v-list-item
-        v-for="(dist, i) in repo.linux"
-        :key="i"
-        :to="'/repo/' + dist['id']"
-        link
-      >
-        <v-list-item-icon>
-          <v-icon v-text="'mdi-' + checkicon(dist['icon'])"></v-icon>
-        </v-list-item-icon>
-        <v-list-item-title v-text="dist['name']"></v-list-item-title>
+    <v-list>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            UESTC 镜像站
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            UESTC Mirror
+          </v-list-item-subtitle>
+        </v-list-item-content>
       </v-list-item>
-    </v-list-group>
 
-    <v-list-group
-      prepend-icon="mdi-application"
-      v-if="typeof repo.app != 'undefined'"
-    >
-      <template v-slot:activator>
-        <v-list-item-title>
-          程序
-        </v-list-item-title>
-      </template>
-
-      <v-list-item
-        v-for="(dist, i) in repo.app"
-        :key="i"
-        :to="'/app/' + dist['id']"
-        link
-      >
+      <v-divider />
+      <v-list-item to="/">
         <v-list-item-icon>
-          <v-icon v-text="'mdi-' + checkicon(dist['icon'])"></v-icon>
+          <v-icon>mdi-home</v-icon>
         </v-list-item-icon>
-        <v-list-item-title v-text="dist['name']"></v-list-item-title>
+
+        <v-list-item-title>主页</v-list-item-title>
       </v-list-item>
-    </v-list-group>
+
+      <v-list-group
+        prepend-icon="mdi-linux"
+        v-if="typeof repo.linux != 'undefined'"
+      >
+        <template v-slot:activator>
+          <v-list-item-title> Linux 发行版 </v-list-item-title>
+        </template>
+
+        <v-list-item
+          v-for="(dist, i) in repo.linux"
+          :key="i"
+          :to="'/repo/' + dist['id']"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon v-text="'mdi-' + checkicon(dist['icon'])"></v-icon>
+          </v-list-item-icon>
+          <v-list-item-title v-text="dist['name']"></v-list-item-title>
+        </v-list-item>
+      </v-list-group>
+
+      <v-list-group
+        prepend-icon="mdi-application"
+        v-if="typeof repo.app != 'undefined'"
+      >
+        <template v-slot:activator>
+          <v-list-item-title>
+            程序
+          </v-list-item-title>
+        </template>
+
+        <v-list-item
+          v-for="(dist, i) in repo.app"
+          :key="i"
+          :to="'/app/' + dist['id']"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon v-text="'mdi-' + checkicon(dist['icon'])"></v-icon>
+          </v-list-item-icon>
+          <v-list-item-title v-text="dist['name']"></v-list-item-title>
+        </v-list-item>
+      </v-list-group>
+    </v-list>
     <template v-slot:append>
       <v-list-group prepend-icon="mdi-dots-horizontal">
         <template v-slot:activator>

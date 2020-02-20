@@ -1,5 +1,7 @@
 <template>
   <v-col cols="12" md="4">
+    <PreviewAlert />
+
     <v-card class="mx-auto">
       <v-list two-line subheader>
         <v-skeleton-loader
@@ -40,6 +42,8 @@
   </v-col>
 </template>
 <script>
+import PreviewAlert from "@/components/Home/PreviewAlert";
+
 export default {
   data: () => ({
     loading: false,
@@ -54,6 +58,9 @@ export default {
         this.loaderr = true;
       })
       .then(() => (this.loading = false));
+  },
+  components: {
+    PreviewAlert
   }
 };
 </script>

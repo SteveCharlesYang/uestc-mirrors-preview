@@ -33,7 +33,7 @@
                   >
                 </v-row>
               </v-card-text>
-              <RepoDocView :doc="thisapp.id" />
+              <v-card-text> <RepoDocView :doc="thisapp.id"/></v-card-text>
             </v-card>
           </v-tab-item>
           <v-tab-item value="tab-download">

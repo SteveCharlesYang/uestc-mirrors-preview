@@ -9,16 +9,16 @@
     <v-card>
       <v-card-text>
         <v-row>
-          <v-col cols="2" align-self="center"
+          <v-col cols="3" align-self="center"
             ><v-img :src="logo" width="100%" :aspect-ratio="1"
           /></v-col>
-          <v-col cols="10">
+          <v-col cols="9">
             <v-card-title class="headline lighten-2" primary-title>
               UESTC Mirrors
             </v-card-title>
-            <v-card-subtitle
-              >Insider Preview v{{ version }}</v-card-subtitle
-            ></v-col
+            <v-card-subtitle>
+              Insider Preview v{{ version }}
+            </v-card-subtitle></v-col
           >
         </v-row>
 
@@ -32,7 +32,8 @@
         本镜像在文档上借鉴了
         <a href="https://mirrors.tuna.tsinghua.edu.cn/">TUNA Mirrors</a>
         的部分内容。<br />
-        本镜像前端由<a href="">Vue.js</a>和<a href="">Vuetify</a>强力驱动。
+        本镜像前端由 <a href="https://vuejs.org">Vue.js </a>和
+        <a href="https://vuetifyjs.com">Vuetify</a> 强力驱动。
       </v-card-text>
 
       <v-divider></v-divider>
@@ -44,7 +45,7 @@
               icon
               v-on="on"
               @click.stop="
-                open_link('https://github.com/uestclug/uestc-mirrors-preview')
+                open_link('https://gitlab.com/uestclug/uestc-mirrors-preview')
               "
             >
               <v-icon>mdi-xml</v-icon>

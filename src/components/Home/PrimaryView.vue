@@ -3,11 +3,11 @@
     <v-col cols="12" md="8" sm="6" class="d-flex flex-column">
       <v-card class="flex d-flex flex-column">
         <v-card-title class="headline justify-center"
-          >电子科技大学开源镜像站</v-card-title
+          >电子科技大学 开源镜像站</v-card-title
         >
 
         <v-card-subtitle class="text-center"
-          >本站由电子科技大学 Linux 用户组及电子科技大学网管会共同提供。
+          >本站由 电子科技大学 Linux 用户组 及 电子科技大学网管会 共同提供。
           <br />
           本站共收录了 <b>15</b> 个 Linux 发行版镜像和&nbsp;
           <b>7</b> 个软件包镜像。</v-card-subtitle
