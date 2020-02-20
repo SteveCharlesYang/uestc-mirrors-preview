@@ -1,16 +1,18 @@
 image: node:13-alpine
-cache:
-  paths:
-    - node_modules/
-
-before_script:
-  - yarn
 
 pages:
+  cache:
+    paths:
+    - node_modules/
+
   script:
-    - yarn build
+  - yarn install
+  - yarn build
+  - mv public public-vue
+  - mv dist public
+  - cp public/index.html public/404.html
   artifacts:
     paths:
-      - dist
+    - public
   only:
-    - master
+  - master
