@@ -27,16 +27,25 @@ export default {
     mdtext: null
   }),
   props: ["doc"],
+  methods: {
+    refreshDoc() {
+      this.docerr = false;
+      this.$ajax
+        .get("doc/" + this.doc + ".md")
+        .then(response => (this.mdtext = response.data))
+        .catch(() => {
+          this.docerr = true;
+        })
+        .finally(() => (this.loading = false));
+    }
+  },
+  watch: {
+    doc() {
+      this.refreshDoc();
+    }
+  },
   mounted: function() {
-    this.$ajax
-      .get("doc/" + this.doc + ".md")
-      .then(response => (this.mdtext = response.data))
-      .catch(e => {
-        // eslint-disable-next-line no-console
-        console.log(e);
-        this.docerr = true;
-      })
-      .finally(() => (this.loading = false));
+    this.refreshDoc();
   },
   components: { VueMarkdown }
 };
@@ -45,6 +54,7 @@ export default {
 .mdtext code {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+  max-width: 100%;
 }
 .mdtext img {
   max-width: 100%;
