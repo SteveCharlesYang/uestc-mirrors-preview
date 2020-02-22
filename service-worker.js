@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6b8da07f51ea2c5eb1288aa4680ae87a.js"
+  "/precache-manifest.6b9391d7c6bf57fb1aa2fa61b887d11a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mirrors-frontend"});

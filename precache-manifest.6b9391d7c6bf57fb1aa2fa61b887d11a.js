@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "caae86297ad5f73c7d3b",
-    "url": "/css/app.4c153a12.css"
+    "revision": "3a90b32c956425dc5ce6",
+    "url": "/css/app.bd8910a2.css"
   },
   {
-    "revision": "625bdfd4d80ad698bafb",
+    "revision": "c6e2672f887f0021d71f",
     "url": "/css/chunk-f823552e.a58bf20f.css"
   },
   {
-    "revision": "9c796baf0ba0f8402697",
-    "url": "/css/chunk-vendors.6050725f.css"
+    "revision": "cc2f8f65b5a4689d6ee7",
+    "url": "/css/chunk-vendors.f7398a5c.css"
   },
   {
     "revision": "9523fab0b5131689ab58d958640aebd0",
@@ -24,11 +24,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/alpine.md"
   },
   {
-    "revision": "debe781687439b9963659853354f596f",
+    "revision": "5cc7f79cd1a64998aa9635ba8176d049",
     "url": "/doc/archlinux.md"
   },
   {
-    "revision": "ac870eb30173484e23028a6aa68eb13f",
+    "revision": "60ca54bf979921c5d86e6fef77e1c0b4",
     "url": "/doc/archlinuxcn.md"
   },
   {
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/fedora.md"
   },
   {
-    "revision": "71b0eafe516b29c285c3faa0a2d6201f",
+    "revision": "71b24f9e883fb81b66ca1bc1597357ec",
     "url": "/doc/home-archlinux.md"
   },
   {
@@ -68,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/proxmox.md"
   },
   {
-    "revision": "79cc5f214bc0d803e4b3e4d8aab4af50",
+    "revision": "199d2732c37e258fece1a8112566b5df",
     "url": "/doc/repo-ck.md"
   },
   {
@@ -88,20 +88,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo_mirrors.8a0c76bd.png"
   },
   {
-    "revision": "a1b38a275724f6db94565954a14808f1",
+    "revision": "b1d7dc80a14a2d046c9d475aa45e00bb",
     "url": "/index.html"
   },
   {
-    "revision": "caae86297ad5f73c7d3b",
-    "url": "/js/app.d751f7cd.js"
+    "revision": "3a90b32c956425dc5ce6",
+    "url": "/js/app.a2b32668.js"
   },
   {
-    "revision": "625bdfd4d80ad698bafb",
-    "url": "/js/chunk-f823552e.8acbc9d6.js"
+    "revision": "c6e2672f887f0021d71f",
+    "url": "/js/chunk-f823552e.ac997a89.js"
   },
   {
-    "revision": "9c796baf0ba0f8402697",
-    "url": "/js/chunk-vendors.3b5f6ffa.js"
+    "revision": "cc2f8f65b5a4689d6ee7",
+    "url": "/js/chunk-vendors.eb67c6d6.js"
   },
   {
     "revision": "22023f531117d53e8bc13bcc9cb65bc0",
